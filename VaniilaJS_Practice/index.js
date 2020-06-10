@@ -99,22 +99,9 @@ function handleClick() {
   } else {
     title.style.color = BASE_COLOR;
   }
-  // if (title.style.color === "cornflowerblue") {
-  //   title.style.color = "black";
-  // } else {
-  //   title.style.color = "cornflowerblue";
-  // }
 }
 
 title.addEventListener("click", handleClick);
-// document.getElementById("title").addEventListener("click", handleClick);
-// document.querySelector("#title").addEventListener("click", () => {
-//   if (title.style.color === "blue") {
-//     title.style.color = "black";
-//   } else {
-//     title.style.color = "blue";
-//   }
-// });
 
 // Make Clock
 const clockContainer = document.querySelector(".js-clock"),
