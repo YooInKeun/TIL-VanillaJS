@@ -8,3 +8,8 @@ const mapped = nums.map((item) => {
 });
 
 console.log(mapped);
+
+// Filter
+const filtered = nums.filter((item) => item > 3);
+
+console.log(filtered);
