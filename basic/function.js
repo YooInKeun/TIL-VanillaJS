@@ -92,3 +92,8 @@ const students = [
         .join(', ');
     console.log(result);
 }
+
+// IIEE
+{
+    (() => console.log("IIEE"))();
+}
