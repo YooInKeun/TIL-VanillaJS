@@ -8,14 +8,14 @@ function fetchUser() {
 }
 
 const user = fetchUser();
-console.log(user);
+user.then(console.log);
 
 async function fetchUser2() {
     return 'aiden';
 }
 
 const user2 = fetchUser2();
-console.log(user2.then(console.log));
+user2.then(console.log);
 
 // 2. await
 function delay(ms) {
@@ -40,14 +40,11 @@ function pickFruits() {
         })
 };
 
+// 콜백 지옥 벗어나기
 async function pickFruits2() {
-    try {
-        const apple = await getApple();
-        const banana = await getBanana();
-        return `${apple} + ${banana}`
-    } catch {
-
-    }
+    const apple = await getApple();
+    const banana = await getBanana();
+    return `${apple} + ${banana}`
 }
 
 // 병렬 실행
@@ -68,7 +65,6 @@ function pickAllFruits() {
 function pickOnlyOne() {
     return Promise.race([getApple(), getBanana()]);
 }
-
 
 pickFruits().then(console.log);
 pickFruits2().then(console.log);
